@@ -20,6 +20,7 @@ namespace M2L_ProjetWinform
 
         private void ListeAdherentClub_Load(object sender, EventArgs e)
         {
+            // Verification Double entrée
             foreach(Club unClub in LesClubs)
             {
                 cb_club.Items.Add(unClub.getNom());
@@ -38,7 +39,7 @@ namespace M2L_ProjetWinform
                 i++;
             }
             label1.Text = i.ToString();
-            List<Adherent> LesAdhe = AccessDB.getAdherentClub(LesClubs.ElementAt(i).getId());
+            List<Adherent> LesAdhe = AccessDB.getAdherentClub(LesClubs.ElementAt(i - 1).getId());
             foreach(Adherent unAdhe in LesAdhe)
             {
                 ListViewItem laLigne = new ListViewItem();
@@ -50,6 +51,11 @@ namespace M2L_ProjetWinform
                 laLigne.SubItems.Add(unAdhe.getCotisation().ToString());
                 lvAdherent.Items.Add(laLigne);
             }
+        }
+
+        private void btnFermer_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

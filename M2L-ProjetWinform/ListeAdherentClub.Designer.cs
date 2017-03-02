@@ -39,6 +39,7 @@
             this.btn_recherche = new System.Windows.Forms.Button();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
+            this.btnFermer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cb_club
@@ -46,7 +47,7 @@
             this.cb_club.FormattingEnabled = true;
             this.cb_club.Location = new System.Drawing.Point(130, 35);
             this.cb_club.Name = "cb_club";
-            this.cb_club.Size = new System.Drawing.Size(121, 21);
+            this.cb_club.Size = new System.Drawing.Size(234, 21);
             this.cb_club.TabIndex = 0;
             // 
             // lvAdherent
@@ -108,15 +109,30 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(33, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 27;
-            this.label1.Text = "label1";
+            this.label1.Text = "Club :";
+            // 
+            // btnFermer
+            // 
+            this.btnFermer.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnFermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFermer.Image = ((System.Drawing.Image)(resources.GetObject("btnFermer.Image")));
+            this.btnFermer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFermer.Location = new System.Drawing.Point(683, 22);
+            this.btnFermer.Name = "btnFermer";
+            this.btnFermer.Size = new System.Drawing.Size(152, 45);
+            this.btnFermer.TabIndex = 28;
+            this.btnFermer.Text = "&Fermer";
+            this.btnFermer.UseVisualStyleBackColor = false;
+            this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
             // ListeAdherentClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 521);
+            this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_recherche);
             this.Controls.Add(this.lvAdherent);
@@ -142,5 +158,6 @@
         private System.Windows.Forms.Button btn_recherche;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnFermer;
     }
 }
