@@ -1,0 +1,119 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+namespace M2L_ProjetWinform
+{
+    class AccessDB
+    {
+
+        // Recuperation de la liste de tout les Adherents
+        public static List<Adherent> getAllAdherent()
+        {
+            List<Adherent> LesAdherents = new List<Adherent>();
+            string chaineDeconnexion = "SERVER=localhost;" + "DATABASE=bdwinform;" + "UID=root;" + "PASSWORD=;";
+            MySqlConnection connection = new MySqlConnection(chaineDeconnexion);
+            MySqlCommand maCommande = connection.CreateCommand();
+            MySqlDataReader maLigne;
+            maCommande.CommandText = "select * from adherent";
+            connection.Open();
+            maLigne = maCommande.ExecuteReader();
+            while (maLigne.Read())
+            {
+                string[] valeurColonnes = new string[9];
+                for (int i = 0; i < maLigne.FieldCount; i++) valeurColonnes[i] = maLigne.GetValue(i).ToString();
+                int id = int.Parse(valeurColonnes[0]);
+                string nom = valeurColonnes[1];
+                string prenom = valeurColonnes[2];
+                char sexe = char.Parse(valeurColonnes[3]);
+                string naissance = valeurColonnes[4];
+                string rueAdresse = valeurColonnes[5];
+                string cp = valeurColonnes[6];
+                string ville = valeurColonnes[7];
+                int cotisation = int.Parse(valeurColonnes[8]);
+                Adherent unAdherent = new Adherent(sexe, nom, prenom, naissance, rueAdresse, cp, ville, cotisation, id);
+                LesAdherents.Add(unAdherent);
+            }
+            connection.Close();
+            return (LesAdherents);
+        }
+
+        public static void AjouterAdherent(Adherent unAdhe)
+        {
+            string nom = unAdhe.getNom();
+            string prenom = unAdhe.getPrenom();
+            char sexe = unAdhe.getSexe();
+            string rue = unAdhe.getRue();
+            string cp = unAdhe.getCp();
+            string ville = unAdhe.getVille();
+            string naissance = unAdhe.getNaissance();
+            float coti = unAdhe.getCotisation();
+            //connection base
+            string chaineDeconnexion = "SERVER=localhost;" + "DATABASE=bdwinform;" + "UID=root;" + "PASSWORD=;";
+            MySqlConnection connection = new MySqlConnection(chaineDeconnexion);
+            MySqlCommand maCommande = connection.CreateCommand();
+            maCommande.CommandText = "INSERT INTO `adherent` (`nom`,`prenom`,`sexe`,`naissance`,`rueAdresse`,`cp`,`ville`,`cotisation`) VALUES ('" + nom + "','" + prenom + "','" + sexe + "','" + naissance + "','" + rue + "','" + cp + "','" + ville + "','" + coti + "')";
+            connection.Open();
+            maCommande.ExecuteReader();
+        }
+
+        public static List<Club> GetAllClub()
+        {
+            List<Club> LesClubs = new List<Club>();
+            string chaineDeconnexion = "SERVER=localhost;" + "DATABASE=bdwinform;" + "UID=root;" + "PASSWORD=;";
+            MySqlConnection connection = new MySqlConnection(chaineDeconnexion);
+            MySqlCommand maCommande = connection.CreateCommand();
+            MySqlDataReader maLigne;
+            maCommande.CommandText = "select * from club";
+            connection.Open();
+            maLigne = maCommande.ExecuteReader();
+            while (maLigne.Read())
+            {
+                string[] valeurColonnes = new string[7];
+                for (int i = 0; i < maLigne.FieldCount; i++) valeurColonnes[i] = maLigne.GetValue(i).ToString();
+                string nom = valeurColonnes[0];
+                string site = valeurColonnes[1];
+                string adress = valeurColonnes[2];
+                string telephone = valeurColonnes[3];
+                string email = valeurColonnes[4];
+                string type = valeurColonnes[5];
+                int id = int.Parse(valeurColonnes[6]);
+                Club unClub = new Club(nom, site, adress, telephone, email, type, id);
+                LesClubs.Add(unClub);
+            }
+            connection.Close();
+            return LesClubs;
+        }
+
+        public static List<Adherent> getAdherentClub(int idClub)
+        {
+            List<Adherent> lesAdhe = new List<Adherent>();
+            string chaineDeconnexion = "SERVER=localhost;" + "DATABASE=bdwinform;" + "UID=root;" + "PASSWORD=;";
+            MySqlConnection connection = new MySqlConnection(chaineDeconnexion);
+            MySqlCommand maCommande = connection.CreateCommand();
+            MySqlDataReader maLigne;
+            maCommande.CommandText = "select ad.nom,prenom,sexe,rueAdresse,cp,ville,cotisation,Year(naissance) as naissance from adherent ad inner join license li on ad.idadherent = li.idAdherent inner join club cl on li.idClub = cl.idClub where cl.idClub =" + idClub + " Order by naissance" ;
+            connection.Open();
+            maLigne = maCommande.ExecuteReader();
+            while (maLigne.Read())
+            {
+                string[] valeurColonnes = new string[8];
+                for (int i = 0; i < maLigne.FieldCount; i++) valeurColonnes[i] = maLigne.GetValue(i).ToString();
+                string nom = valeurColonnes[0];
+                string prenom = valeurColonnes[1];
+                char sexe = char.Parse(valeurColonnes[2]);
+                string rueAdresse = valeurColonnes[3];
+                string cp = valeurColonnes[4];
+                string ville = valeurColonnes[5];
+                int coti = int.Parse(valeurColonnes[6]);
+                string naissance = valeurColonnes[7];
+                Adherent unAdhe = new Adherent(sexe, nom, prenom, naissance, rueAdresse, cp, ville, coti);
+                lesAdhe.Add(unAdhe);
+            }
+            connection.Close();
+            return lesAdhe;
+        }
+    }
+}
