@@ -15,6 +15,7 @@ namespace M2L_ProjetWinform
         private string email;
         private string type;
         private int id;
+        private int nombreAdhe;
 
         // Constructeur
 
@@ -38,7 +39,7 @@ namespace M2L_ProjetWinform
         public string getEmail() { return email; }
         public string getType() { return type; }
         public int getId() { return id; }
-
+        public int getNombreAdhe() { return nombreAdhe; }
         //set
 
         public void setNom(string nouveau) { nom = nouveau; }
@@ -46,5 +47,6 @@ namespace M2L_ProjetWinform
         public void setAdresse(string nouveau) { adresse = nouveau; }
         public void setTelephone(string nouveau) { telephone = nouveau; }
         public void setEmail(string nouveau) { email = nouveau; }
+        public void setAdhe(int nouveau) { nombreAdhe = nouveau; }
     }
 }

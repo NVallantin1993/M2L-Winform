@@ -10,35 +10,36 @@ namespace M2L_ProjetWinform
     {
 
         // Recuperation de la liste de tout les Adherents
-        public static List<Adherent> getAllAdherent()
+        public static List<Adherent> getAllAdherent(string colonneTri, string ordre)
         {
             List<Adherent> LesAdherents = new List<Adherent>();
             string chaineDeconnexion = "SERVER=localhost;" + "DATABASE=bdwinform;" + "UID=root;" + "PASSWORD=;";
             MySqlConnection connection = new MySqlConnection(chaineDeconnexion);
             MySqlCommand maCommande = connection.CreateCommand();
             MySqlDataReader maLigne;
-            maCommande.CommandText = "select * from adherent";
+            maCommande.CommandText = "select idAdherent,nom, prenom, sexe, YEAR(naissance) ,MONTH(naissance), DAY(naissance), rueAdresse, cp, ville, cotisation, naissance from adherent order by " + colonneTri + " " + ordre;
             connection.Open();
             maLigne = maCommande.ExecuteReader();
             while (maLigne.Read())
             {
-                string[] valeurColonnes = new string[9];
+                string[] valeurColonnes = new string[12];
                 for (int i = 0; i < maLigne.FieldCount; i++) valeurColonnes[i] = maLigne.GetValue(i).ToString();
                 int id = int.Parse(valeurColonnes[0]);
                 string nom = valeurColonnes[1];
                 string prenom = valeurColonnes[2];
                 char sexe = char.Parse(valeurColonnes[3]);
-                string naissance = valeurColonnes[4];
-                string rueAdresse = valeurColonnes[5];
-                string cp = valeurColonnes[6];
-                string ville = valeurColonnes[7];
-                int cotisation = int.Parse(valeurColonnes[8]);
+                string naissance = valeurColonnes[6] + "/" + valeurColonnes[5] + "/" + valeurColonnes[4];
+                string rueAdresse = valeurColonnes[7];
+                string cp = valeurColonnes[8];
+                string ville = valeurColonnes[9];
+                int cotisation = int.Parse(valeurColonnes[10]);
                 Adherent unAdherent = new Adherent(sexe, nom, prenom, naissance, rueAdresse, cp, ville, cotisation, id);
                 LesAdherents.Add(unAdherent);
             }
             connection.Close();
             return (LesAdherents);
         }
+        // Ajout d'un adhérent
 
         public static void AjouterAdherent(Adherent unAdhe)
         {
@@ -58,6 +59,7 @@ namespace M2L_ProjetWinform
             connection.Open();
             maCommande.ExecuteReader();
         }
+        // Recuperation de la liste des club
 
         public static List<Club> GetAllClub()
         {
@@ -86,7 +88,7 @@ namespace M2L_ProjetWinform
             connection.Close();
             return LesClubs;
         }
-
+        // récupere la liste des adherent d'un club
         public static List<Adherent> getAdherentClub(int idClub)
         {
             List<Adherent> lesAdhe = new List<Adherent>();
@@ -114,6 +116,25 @@ namespace M2L_ProjetWinform
             }
             connection.Close();
             return lesAdhe;
+        }
+        // Recupere le nombre d'adherent a un club donnée
+        public static void setClubAdherent(Club unClub)
+        {
+            int idclub = unClub.getId();
+            string chaineDeconnexion = "SERVER=localhost;" + "DATABASE=bdwinform;" + "UID=root;" + "PASSWORD=;";
+            MySqlConnection connection = new MySqlConnection(chaineDeconnexion);
+            MySqlCommand maCommande = connection.CreateCommand();
+            MySqlDataReader maLigne;
+            maCommande.CommandText = "select count(*) from license where idclub = " + idclub;
+            connection.Open();
+            maLigne = maCommande.ExecuteReader();
+            while(maLigne.Read())
+            {
+                string[] valeurColonnes = new string[1];
+                for (int i = 0; i < maLigne.FieldCount; i++) valeurColonnes[i] = maLigne.GetValue(i).ToString();
+                unClub.setAdhe(int.Parse(valeurColonnes[0]));
+            }
+            connection.Close();
         }
     }
 }

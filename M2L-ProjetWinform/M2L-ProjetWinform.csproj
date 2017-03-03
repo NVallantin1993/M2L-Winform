@@ -50,48 +50,75 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessDB.cs" />
-    <Compile Include="AddAdherent.cs">
+    <Compile Include="AjoutClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddAdherent.Designer.cs">
+    <Compile Include="AjoutClub.Designer.cs">
+      <DependentUpon>AjoutClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classe\AccessDB.cs" />
+    <Compile Include="ListeClubSpecialite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeClubSpecialite.Designer.cs">
+      <DependentUpon>ListeClubSpecialite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\Club\ListeClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Club\ListeClub.Designer.cs">
+      <DependentUpon>ListeClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\Adherent\AddAdherent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Adherent\AddAdherent.Designer.cs">
       <DependentUpon>AddAdherent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Adherent.cs" />
-    <Compile Include="Club.cs" />
-    <Compile Include="Evenement.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Classe\Adherent.cs" />
+    <Compile Include="Classe\Club.cs" />
+    <Compile Include="Classe\Evenement.cs" />
+    <Compile Include="Acceuil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Acceuil.Designer.cs">
+      <DependentUpon>Acceuil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inscription.cs" />
-    <Compile Include="License.cs" />
-    <Compile Include="ListeAdherentClub.cs">
+    <Compile Include="Classe\Inscription.cs" />
+    <Compile Include="Classe\License.cs" />
+    <Compile Include="Vue\Adherent\ListeAdherentClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListeAdherentClub.Designer.cs">
+    <Compile Include="Vue\Adherent\ListeAdherentClub.Designer.cs">
       <DependentUpon>ListeAdherentClub.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListeAllAdherents.cs">
+    <Compile Include="Vue\Adherent\ListeAllAdherents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListeAllAdherents.Designer.cs">
+    <Compile Include="Vue\Adherent\ListeAllAdherents.Designer.cs">
       <DependentUpon>ListeAllAdherents.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddAdherent.resx">
+    <EmbeddedResource Include="AjoutClub.resx">
+      <DependentUpon>AjoutClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeClubSpecialite.resx">
+      <DependentUpon>ListeClubSpecialite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Club\ListeClub.resx">
+      <DependentUpon>ListeClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Adherent\AddAdherent.resx">
       <DependentUpon>AddAdherent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Acceuil.resx">
+      <DependentUpon>Acceuil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListeAdherentClub.resx">
+    <EmbeddedResource Include="Vue\Adherent\ListeAdherentClub.resx">
       <DependentUpon>ListeAdherentClub.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListeAllAdherents.resx">
+    <EmbeddedResource Include="Vue\Adherent\ListeAllAdherents.resx">
       <DependentUpon>ListeAllAdherents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

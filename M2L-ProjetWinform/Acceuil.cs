@@ -57,5 +57,19 @@ namespace M2L_ProjetWinform
             maFenetre.MdiParent = this;
             maFenetre.Show();
         }
+
+        private void listeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ListeClub maFenetre = new ListeClub();
+            maFenetre.MdiParent = this;
+            maFenetre.Show();
+        }
+
+        private void parSpecialitéToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListeClubSpecialite maFenetre = new ListeClubSpecialite();
+            maFenetre.MdiParent = this;
+            maFenetre.Show();
+        }
     }
 }

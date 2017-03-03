@@ -11,3 +11,5 @@ C:\Users\µ\Documents\Visual Studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWi
 C:\Users\µ\Documents\Visual Studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L-ProjetWinform.pdb
 C:\Users\µ\Documents\Visual Studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L_ProjetWinform.AddAdherent.resources
 C:\Users\µ\documents\visual studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L_ProjetWinform.ListeAdherentClub.resources
+C:\Users\µ\documents\visual studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L_ProjetWinform.ListeClub.resources
+C:\Users\µ\documents\visual studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L_ProjetWinform.ListeClubSpecialite.resources

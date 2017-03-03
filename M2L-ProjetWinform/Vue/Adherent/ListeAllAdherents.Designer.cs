@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListeAllAdherents));
             this.lvListAdhe = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,6 +38,7 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnFermer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvListAdhe
@@ -56,10 +58,12 @@
             this.lvListAdhe.TabIndex = 0;
             this.lvListAdhe.UseCompatibleStateImageBehavior = false;
             this.lvListAdhe.View = System.Windows.Forms.View.Details;
+            this.lvListAdhe.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lvAdher_ColumnClick);
+            this.lvListAdhe.SelectedIndexChanged += new System.EventHandler(this.lvListAdhe_SelectedIndexChanged);
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "nom";
+            this.columnHeader2.Text = "Nom";
             // 
             // columnHeader3
             // 
@@ -72,14 +76,17 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "date de naissance";
+            this.columnHeader5.Width = 120;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Rue adresse";
+            this.columnHeader6.Width = 150;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Code postal";
+            this.columnHeader7.Width = 120;
             // 
             // columnHeader8
             // 
@@ -89,11 +96,26 @@
             // 
             this.columnHeader9.Text = "Cotisation";
             // 
+            // btnFermer
+            // 
+            this.btnFermer.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnFermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFermer.Image = ((System.Drawing.Image)(resources.GetObject("btnFermer.Image")));
+            this.btnFermer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFermer.Location = new System.Drawing.Point(471, 450);
+            this.btnFermer.Name = "btnFermer";
+            this.btnFermer.Size = new System.Drawing.Size(152, 45);
+            this.btnFermer.TabIndex = 29;
+            this.btnFermer.Text = "&Fermer";
+            this.btnFermer.UseVisualStyleBackColor = false;
+            this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
+            // 
             // ListeAllAdherents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 547);
+            this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.lvListAdhe);
             this.Name = "ListeAllAdherents";
             this.Text = "Liste de tout les adhérents";
@@ -114,5 +136,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.Button btnFermer;
     }
 }
