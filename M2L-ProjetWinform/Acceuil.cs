@@ -71,5 +71,19 @@ namespace M2L_ProjetWinform
             maFenetre.MdiParent = this;
             maFenetre.Show();
         }
+
+        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteAdherent maFenetre = new DeleteAdherent();
+            maFenetre.MdiParent = this;
+            maFenetre.Show();
+        }
+
+        private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AjoutClub maFenetre = new AjoutClub();
+            maFenetre.MdiParent = this;
+            maFenetre.Show();
+        }
     }
 }

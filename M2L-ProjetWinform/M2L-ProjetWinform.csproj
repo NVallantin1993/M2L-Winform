@@ -57,6 +57,12 @@
       <DependentUpon>AjoutClub.cs</DependentUpon>
     </Compile>
     <Compile Include="Classe\AccessDB.cs" />
+    <Compile Include="Vue\Adherent\DeleteAdherent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Adherent\DeleteAdherent.Designer.cs">
+      <DependentUpon>DeleteAdherent.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListeClubSpecialite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AjoutClub.resx">
       <DependentUpon>AjoutClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Adherent\DeleteAdherent.resx">
+      <DependentUpon>DeleteAdherent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListeClubSpecialite.resx">
       <DependentUpon>ListeClubSpecialite.cs</DependentUpon>

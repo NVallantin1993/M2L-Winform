@@ -29,6 +29,16 @@ namespace M2L_ProjetWinform
             type = leType;
             id = leId;
         }
+        public Club(string leNom, string leSite, string leAdresse, string leTelephone, string leEmail, string leType)
+        {
+            nom = leNom;
+            site = leSite;
+            adresse = leAdresse;
+            telephone = leTelephone;
+            email = leEmail;
+            type = leType;
+            id = 0;
+        }
 
         //get
 
