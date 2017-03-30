@@ -30,5 +30,10 @@ namespace M2L_ProjetWinform
                 MessageBox.Show("Le club " + tbNom.Text + " existe deja");
 
         }
+
+        private void AjoutClub_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

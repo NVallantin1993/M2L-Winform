@@ -29,48 +29,34 @@
         private void InitializeComponent()
         {
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.donnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.parSpecialitéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.adherentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nombreDadherentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.evenementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fermezToutesLesFenetresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statistiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip2
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.donnéesToolStripMenuItem,
             this.clubToolStripMenuItem,
             this.adherentToolStripMenuItem,
-            this.evenementToolStripMenuItem});
+            this.evenementToolStripMenuItem,
+            this.fermezToutesLesFenetresToolStripMenuItem,
+            this.statistiqueToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(1193, 24);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // donnéesToolStripMenuItem
-            // 
-            this.donnéesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ouvrirToolStripMenuItem});
-            this.donnéesToolStripMenuItem.Name = "donnéesToolStripMenuItem";
-            this.donnéesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.donnéesToolStripMenuItem.Text = "Données";
-            // 
-            // ouvrirToolStripMenuItem
-            // 
-            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.ouvrirToolStripMenuItem.Text = "Ouvrir";
-            this.ouvrirToolStripMenuItem.Click += new System.EventHandler(this.ouvrirToolStripMenuItem_Click);
             // 
             // clubToolStripMenuItem
             // 
@@ -86,7 +72,7 @@
             this.listeToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.parSpecialitéToolStripMenuItem});
             this.listeToolStripMenuItem1.Name = "listeToolStripMenuItem1";
-            this.listeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.listeToolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
             this.listeToolStripMenuItem1.Text = "Liste";
             this.listeToolStripMenuItem1.Click += new System.EventHandler(this.listeToolStripMenuItem1_Click);
             // 
@@ -97,12 +83,19 @@
             this.parSpecialitéToolStripMenuItem.Text = "Par Specialité";
             this.parSpecialitéToolStripMenuItem.Click += new System.EventHandler(this.parSpecialitéToolStripMenuItem_Click);
             // 
+            // ajouterToolStripMenuItem1
+            // 
+            this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
+            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
+            this.ajouterToolStripMenuItem1.Text = "Ajouter";
+            this.ajouterToolStripMenuItem1.Click += new System.EventHandler(this.ajouterToolStripMenuItem1_Click);
+            // 
             // adherentToolStripMenuItem
             // 
             this.adherentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listeToolStripMenuItem,
             this.ajouterToolStripMenuItem,
-            this.supprimerToolStripMenuItem});
+            this.nombreDadherentToolStripMenuItem});
             this.adherentToolStripMenuItem.Name = "adherentToolStripMenuItem";
             this.adherentToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.adherentToolStripMenuItem.Text = "Adherent";
@@ -112,7 +105,7 @@
             this.listeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.parClubToolStripMenuItem});
             this.listeToolStripMenuItem.Name = "listeToolStripMenuItem";
-            this.listeToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.listeToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.listeToolStripMenuItem.Text = "Liste";
             this.listeToolStripMenuItem.Click += new System.EventHandler(this.listeToolStripMenuItem_Click);
             // 
@@ -126,16 +119,16 @@
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
-            // supprimerToolStripMenuItem
+            // nombreDadherentToolStripMenuItem
             // 
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.supprimerToolStripMenuItem.Text = "Supprimer";
-            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
+            this.nombreDadherentToolStripMenuItem.Name = "nombreDadherentToolStripMenuItem";
+            this.nombreDadherentToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.nombreDadherentToolStripMenuItem.Text = "Nombre d\'adherent";
+            this.nombreDadherentToolStripMenuItem.Click += new System.EventHandler(this.nombreDadherentToolStripMenuItem_Click);
             // 
             // evenementToolStripMenuItem
             // 
@@ -143,12 +136,19 @@
             this.evenementToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.evenementToolStripMenuItem.Text = "Evenement";
             // 
-            // ajouterToolStripMenuItem1
+            // fermezToutesLesFenetresToolStripMenuItem
             // 
-            this.ajouterToolStripMenuItem1.Name = "ajouterToolStripMenuItem1";
-            this.ajouterToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.ajouterToolStripMenuItem1.Text = "Ajouter";
-            this.ajouterToolStripMenuItem1.Click += new System.EventHandler(this.ajouterToolStripMenuItem1_Click);
+            this.fermezToutesLesFenetresToolStripMenuItem.Name = "fermezToutesLesFenetresToolStripMenuItem";
+            this.fermezToutesLesFenetresToolStripMenuItem.Size = new System.Drawing.Size(158, 20);
+            this.fermezToutesLesFenetresToolStripMenuItem.Text = "Fermez Toutes les fenetres";
+            this.fermezToutesLesFenetresToolStripMenuItem.Click += new System.EventHandler(this.fermezToutesLesFenetresToolStripMenuItem_Click);
+            // 
+            // statistiqueToolStripMenuItem
+            // 
+            this.statistiqueToolStripMenuItem.Name = "statistiqueToolStripMenuItem";
+            this.statistiqueToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.statistiqueToolStripMenuItem.Text = "Statistique";
+            this.statistiqueToolStripMenuItem.Click += new System.EventHandler(this.statistiqueToolStripMenuItem_Click);
             // 
             // Frm_acceuil
             // 
@@ -171,18 +171,18 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem donnéesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clubToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adherentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem evenementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem parClubToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parSpecialitéToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem nombreDadherentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fermezToutesLesFenetresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statistiqueToolStripMenuItem;
     }
 }
 

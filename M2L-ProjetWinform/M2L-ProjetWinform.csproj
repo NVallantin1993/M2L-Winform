@@ -50,23 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AjoutClub.cs">
+    <Compile Include="EditAdherent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AjoutClub.Designer.cs">
+    <Compile Include="EditAdherent.Designer.cs">
+      <DependentUpon>EditAdherent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\Club\AjoutClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Club\AjoutClub.Designer.cs">
       <DependentUpon>AjoutClub.cs</DependentUpon>
     </Compile>
     <Compile Include="Classe\AccessDB.cs" />
-    <Compile Include="Vue\Adherent\DeleteAdherent.cs">
+    <Compile Include="Vue\Club\ListeClubSpecialite.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vue\Adherent\DeleteAdherent.Designer.cs">
-      <DependentUpon>DeleteAdherent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListeClubSpecialite.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListeClubSpecialite.Designer.cs">
+    <Compile Include="Vue\Club\ListeClubSpecialite.Designer.cs">
       <DependentUpon>ListeClubSpecialite.cs</DependentUpon>
     </Compile>
     <Compile Include="Vue\Club\ListeClub.cs">
@@ -106,13 +112,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AjoutClub.resx">
+    <EmbeddedResource Include="EditAdherent.resx">
+      <DependentUpon>EditAdherent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Club\AjoutClub.resx">
       <DependentUpon>AjoutClub.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vue\Adherent\DeleteAdherent.resx">
-      <DependentUpon>DeleteAdherent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListeClubSpecialite.resx">
+    <EmbeddedResource Include="Vue\Club\ListeClubSpecialite.resx">
       <DependentUpon>ListeClubSpecialite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vue\Club\ListeClub.resx">

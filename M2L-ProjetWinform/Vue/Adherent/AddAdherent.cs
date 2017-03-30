@@ -40,5 +40,10 @@ namespace M2L_ProjetWinform
         {
             this.Close();
         }
+
+        private void AddAdherent_Load(object sender, EventArgs e)
+        {
+            tb_coti.Text = "test";
+        }
     }
 }

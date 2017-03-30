@@ -35,6 +35,8 @@
             this.rb_female = new System.Windows.Forms.RadioButton();
             this.gb_Sexe = new System.Windows.Forms.GroupBox();
             this.gb_adress = new System.Windows.Forms.GroupBox();
+            this.tb_coti = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.mc_naissance = new System.Windows.Forms.MonthCalendar();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tb_coti = new System.Windows.Forms.TextBox();
             this.Add_Adherent = new System.Windows.Forms.Button();
             this.CloseWindow = new System.Windows.Forms.Button();
             this.gb_Sexe.SuspendLayout();
@@ -118,6 +118,22 @@
             this.gb_adress.TabIndex = 7;
             this.gb_adress.TabStop = false;
             this.gb_adress.Text = "Information Complémentaire :";
+            // 
+            // tb_coti
+            // 
+            this.tb_coti.Location = new System.Drawing.Point(180, 196);
+            this.tb_coti.Name = "tb_coti";
+            this.tb_coti.Size = new System.Drawing.Size(100, 20);
+            this.tb_coti.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(30, 196);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Cotisation :";
             // 
             // label6
             // 
@@ -216,22 +232,6 @@
             this.mc_naissance.Name = "mc_naissance";
             this.mc_naissance.TabIndex = 3;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 196);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Cotisation :";
-            // 
-            // tb_coti
-            // 
-            this.tb_coti.Location = new System.Drawing.Point(180, 196);
-            this.tb_coti.Name = "tb_coti";
-            this.tb_coti.Size = new System.Drawing.Size(100, 20);
-            this.tb_coti.TabIndex = 13;
-            // 
             // Add_Adherent
             // 
             this.Add_Adherent.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -272,6 +272,7 @@
             this.Name = "AddAdherent";
             this.Text = "AddAdherent";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.AddAdherent_Load);
             this.gb_Sexe.ResumeLayout(false);
             this.gb_Sexe.PerformLayout();
             this.gb_adress.ResumeLayout(false);

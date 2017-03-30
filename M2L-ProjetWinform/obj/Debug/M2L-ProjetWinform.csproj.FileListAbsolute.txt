@@ -14,4 +14,5 @@ C:\Users\µ\documents\visual studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWi
 C:\Users\µ\documents\visual studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L_ProjetWinform.ListeClub.resources
 C:\Users\µ\documents\visual studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L_ProjetWinform.ListeClubSpecialite.resources
 C:\Users\µ\Documents\Visual Studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L_ProjetWinform.AjoutClub.resources
-C:\Users\µ\Documents\Visual Studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L_ProjetWinform.DeleteAdherent.resources
+C:\Users\µ\Documents\Visual Studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L_ProjetWinform.EditAdherent.resources
+C:\Users\µ\documents\visual studio 2015\Projects\M2L-ProjetWinform\M2L-ProjetWinform\obj\Debug\M2L_ProjetWinform.Statistics.resources

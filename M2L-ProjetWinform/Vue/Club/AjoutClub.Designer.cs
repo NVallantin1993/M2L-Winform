@@ -38,15 +38,15 @@
             this.tbSpecilite = new System.Windows.Forms.TextBox();
             this.tbTelephone = new System.Windows.Forms.TextBox();
             this.gb_contact = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.Add_Club = new System.Windows.Forms.Button();
             this.gb_contact.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -125,14 +125,23 @@
             this.gb_contact.TabStop = false;
             this.gb_contact.Text = "Contact";
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Rue : ";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(63, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "E-Mail :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(63, 218);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Code Postal :";
             // 
             // label2
             // 
@@ -143,14 +152,14 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Ville :";
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 218);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Code Postal :";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(63, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Rue : ";
             // 
             // groupBox1
             // 
@@ -169,32 +178,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Renseignement Généraux";
             // 
-            // label4
+            // label8
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(63, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "E-Mail :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 51);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Nom";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Site internet :";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(49, 218);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Telephone :";
             // 
             // label7
             // 
@@ -205,14 +196,23 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Spécialité/Acitvité :";
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(49, 218);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Telephone :";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(49, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Site internet :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(46, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Nom";
             // 
             // Add_Club
             // 
@@ -239,6 +239,7 @@
             this.Name = "AjoutClub";
             this.Text = "AjoutClub";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.AjoutClub_Load);
             this.gb_contact.ResumeLayout(false);
             this.gb_contact.PerformLayout();
             this.groupBox1.ResumeLayout(false);
