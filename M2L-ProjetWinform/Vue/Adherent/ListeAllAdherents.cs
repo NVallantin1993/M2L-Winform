@@ -22,7 +22,7 @@ namespace M2L_ProjetWinform
         {
             btn_Delete.Enabled = false;
             bt_edit.Enabled = false;
-            List<Adherent> LesAdherents = AccessDB.getAllAdherent("naissance",ordre);
+            List<Adherent> LesAdherents = DBAdherent.getAllAdherent("naissance",ordre);
             foreach (Adherent unAdh in LesAdherents)
             {
                 ListViewItem laLigne = new ListViewItem();
@@ -33,7 +33,6 @@ namespace M2L_ProjetWinform
                 laLigne.SubItems.Add(unAdh.getRue());
                 laLigne.SubItems.Add(unAdh.getCp());
                 laLigne.SubItems.Add(unAdh.getVille());
-                laLigne.SubItems.Add(unAdh.getCotisation().ToString());
                 lvListAdhe.Items.Add(laLigne);
             }
             lvListAdhe.Sorting = SortOrder.None;
@@ -115,7 +114,7 @@ namespace M2L_ProjetWinform
                         ordre = "ASC";
                     break;
             }
-            List<Adherent> LesAdherents = AccessDB.getAllAdherent(colonne, ordre);
+            List<Adherent> LesAdherents = DBAdherent.getAllAdherent(colonne, ordre);
             foreach (Adherent unAdh in LesAdherents)
             {
                 ListViewItem laLigne = new ListViewItem();
@@ -126,7 +125,6 @@ namespace M2L_ProjetWinform
                 laLigne.SubItems.Add(unAdh.getRue());
                 laLigne.SubItems.Add(unAdh.getCp());
                 laLigne.SubItems.Add(unAdh.getVille());
-                laLigne.SubItems.Add(unAdh.getCotisation().ToString());
                 lvListAdhe.Items.Add(laLigne);
             }
 
@@ -144,7 +142,7 @@ namespace M2L_ProjetWinform
 
         private void bt_edit_Click(object sender, EventArgs e)
         {
-            List<Adherent> AllAdhe = AccessDB.getAllAdherent();
+            List<Adherent> AllAdhe = DBAdherent.getAllAdherent();
             int i = -1;
             bool trouve = false;
             while (i < AllAdhe.Count && !trouve)
@@ -162,7 +160,7 @@ namespace M2L_ProjetWinform
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            List<Adherent> AllAdhe = AccessDB.getAllAdherent();
+            List<Adherent> AllAdhe = DBAdherent.getAllAdherent();
             int i = -1;
             bool trouve = false;
             while (i < AllAdhe.Count && !trouve)
@@ -175,10 +173,10 @@ namespace M2L_ProjetWinform
             }
             if (MessageBox.Show("Voulez vous vraiment supprimer l'utilisateur " + AllAdhe.ElementAt(i).getNom() + "  " + AllAdhe.ElementAt(i).getPrenom() + " ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                AccessDB.DeleteAdhe(AllAdhe.ElementAt(i).getId());
+                DBAdherent.DeleteAdhe(AllAdhe.ElementAt(i).getId());
                 lvListAdhe.Items.Clear();
-                AllAdhe = AccessDB.getAllAdherent();
-                List<Adherent> LesAdherents = AccessDB.getAllAdherent("naissance", ordre);
+                AllAdhe = DBAdherent.getAllAdherent();
+                List<Adherent> LesAdherents = DBAdherent.getAllAdherent("naissance", ordre);
                 foreach (Adherent unAdh in LesAdherents)
                 {
                     ListViewItem laLigne = new ListViewItem();
@@ -189,7 +187,6 @@ namespace M2L_ProjetWinform
                     laLigne.SubItems.Add(unAdh.getRue());
                     laLigne.SubItems.Add(unAdh.getCp());
                     laLigne.SubItems.Add(unAdh.getVille());
-                    laLigne.SubItems.Add(unAdh.getCotisation().ToString());
                     lvListAdhe.Items.Add(laLigne);
                 }
                 MessageBox.Show("L'utilisateur a bien été supprimer ");

@@ -11,17 +11,20 @@ namespace M2L_ProjetWinform
         private int idClub;
         private int idAdherent;
         private string license;
+        private int cotisation;
 
-        public License (int leClub, int leAdherent, string laLicense)
+        public License (int leClub, int leAdherent, string laLicense, int laCoti)
         {
             idClub = leClub;
             idAdherent = leAdherent;
             license = laLicense;
+            cotisation = laCoti;
         }
 
         public int getClub() { return idClub; }
         public int getAdherent() { return idAdherent; }
         public string getLicense() { return license; }
+        public int getCotisation() { return cotisation; }
 
     }
 }

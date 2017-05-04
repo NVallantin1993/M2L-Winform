@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bdwinformDataSet" targetNamespace="http://tempuri.org/bdwinformDataSet.xsd" xmlns:mstns="http://tempuri.org/bdwinformDataSet.xsd" xmlns="http://tempuri.org/bdwinformDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bdwinformConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bdwinformConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.M2L_ProjetWinform.Properties.Settings.GlobalReference.Default.bdwinformConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="adherentTableAdapter" GeneratorDataComponentClassName="adherentTableAdapter" Name="adherent" UserDataComponentName="adherentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdwinformConnectionString (Settings)" DbObjectName="bdwinform.adherent" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `idAdherent`, `nom`, `prenom`, `sexe`, `naissance`, `rueAdresse`, `cp`, `ville`, `cotisation` FROM `adherent`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clubTableAdapter" GeneratorDataComponentClassName="clubTableAdapter" Name="club" UserDataComponentName="clubTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdwinformConnectionString (Settings)" DbObjectName="bdwinform.club" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `nom`, `site`, `adresse`, `telephone`, `email`, `type`, `idClub` FROM `club`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="evenementTableAdapter" GeneratorDataComponentClassName="evenementTableAdapter" Name="evenement" UserDataComponentName="evenementTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdwinformConnectionString (Settings)" DbObjectName="bdwinform.evenement" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `DateDebut`, `DateFin`, `adresse`, `nom`, `idEvent`, `type`, `idClub` FROM `evenement`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="inscriptionTableAdapter" GeneratorDataComponentClassName="inscriptionTableAdapter" Name="inscription" UserDataComponentName="inscriptionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdwinformConnectionString (Settings)" DbObjectName="bdwinform.inscription" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `idEvent`, `idAdherent` FROM `inscription`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="licenseTableAdapter" GeneratorDataComponentClassName="licenseTableAdapter" Name="license" UserDataComponentName="licenseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bdwinformConnectionString (Settings)" DbObjectName="bdwinform.license" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `numero`, `idClub`, `idAdherent` FROM `license`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bdwinformDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bdwinformDataSet" msprop:Generator_UserDSName="bdwinformDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="adherent" msprop:Generator_TableClassName="adherentDataTable" msprop:Generator_TableVarName="tableadherent" msprop:Generator_TablePropName="adherent" msprop:Generator_RowDeletingName="adherentRowDeleting" msprop:Generator_RowChangingName="adherentRowChanging" msprop:Generator_RowEvHandlerName="adherentRowChangeEventHandler" msprop:Generator_RowDeletedName="adherentRowDeleted" msprop:Generator_UserTableName="adherent" msprop:Generator_RowChangedName="adherentRowChanged" msprop:Generator_RowEvArgName="adherentRowChangeEvent" msprop:Generator_RowClassName="adherentRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="club" msprop:Generator_TableClassName="clubDataTable" msprop:Generator_TableVarName="tableclub" msprop:Generator_TablePropName="club" msprop:Generator_RowDeletingName="clubRowDeleting" msprop:Generator_RowChangingName="clubRowChanging" msprop:Generator_RowEvHandlerName="clubRowChangeEventHandler" msprop:Generator_RowDeletedName="clubRowDeleted" msprop:Generator_UserTableName="club" msprop:Generator_RowChangedName="clubRowChanged" msprop:Generator_RowEvArgName="clubRowChangeEvent" msprop:Generator_RowClassName="clubRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="evenement" msprop:Generator_TableClassName="evenementDataTable" msprop:Generator_TableVarName="tableevenement" msprop:Generator_TablePropName="evenement" msprop:Generator_RowDeletingName="evenementRowDeleting" msprop:Generator_RowChangingName="evenementRowChanging" msprop:Generator_RowEvHandlerName="evenementRowChangeEventHandler" msprop:Generator_RowDeletedName="evenementRowDeleted" msprop:Generator_UserTableName="evenement" msprop:Generator_RowChangedName="evenementRowChanged" msprop:Generator_RowEvArgName="evenementRowChangeEvent" msprop:Generator_RowClassName="evenementRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inscription" msprop:Generator_TableClassName="inscriptionDataTable" msprop:Generator_TableVarName="tableinscription" msprop:Generator_TablePropName="inscription" msprop:Generator_RowDeletingName="inscriptionRowDeleting" msprop:Generator_RowChangingName="inscriptionRowChanging" msprop:Generator_RowEvHandlerName="inscriptionRowChangeEventHandler" msprop:Generator_RowDeletedName="inscriptionRowDeleted" msprop:Generator_UserTableName="inscription" msprop:Generator_RowChangedName="inscriptionRowChanged" msprop:Generator_RowEvArgName="inscriptionRowChangeEvent" msprop:Generator_RowClassName="inscriptionRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="license" msprop:Generator_TableClassName="licenseDataTable" msprop:Generator_TableVarName="tablelicense" msprop:Generator_TablePropName="license" msprop:Generator_RowDeletingName="licenseRowDeleting" msprop:Generator_RowChangingName="licenseRowChanging" msprop:Generator_RowEvHandlerName="licenseRowChangeEventHandler" msprop:Generator_RowDeletedName="licenseRowDeleted" msprop:Generator_UserTableName="license" msprop:Generator_RowChangedName="licenseRowChanged" msprop:Generator_RowEvArgName="licenseRowChangeEvent" msprop:Generator_RowClassName="licenseRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

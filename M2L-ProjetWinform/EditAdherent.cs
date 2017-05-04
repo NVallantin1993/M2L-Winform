@@ -26,7 +26,6 @@ namespace M2L_ProjetWinform
               tb_prenom.Text = test.getPrenom();
               tb_prenom.Enabled = false;
               tb_cp.Text = test.getCp();
-              tb_coti.Text = test.getCotisation().ToString();
               tb_rue.Text = test.getRue();
               tb_ville.Text = test.getVille();
               switch (test.getSexe().ToString())

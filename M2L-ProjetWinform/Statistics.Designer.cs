@@ -28,69 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.lvMaxLicense = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.components = new System.ComponentModel.Container();
+            this.bdwinformDataSet = new M2L_ProjetWinform.bdwinformDataSet();
+            this.adherentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.adherentTableAdapter = new M2L_ProjetWinform.bdwinformDataSetTableAdapters.adherentTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bdwinformDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adherentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // bdwinformDataSet
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Adherent avec le plus de license :";
+            this.bdwinformDataSet.DataSetName = "bdwinformDataSet";
+            this.bdwinformDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lvMaxLicense
+            // adherentBindingSource
             // 
-            this.lvMaxLicense.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.lvMaxLicense.Location = new System.Drawing.Point(15, 130);
-            this.lvMaxLicense.Name = "lvMaxLicense";
-            this.lvMaxLicense.Size = new System.Drawing.Size(227, 204);
-            this.lvMaxLicense.TabIndex = 2;
-            this.lvMaxLicense.UseCompatibleStateImageBehavior = false;
-            this.lvMaxLicense.View = System.Windows.Forms.View.Details;
+            this.adherentBindingSource.DataMember = "adherent";
+            this.adherentBindingSource.DataSource = this.bdwinformDataSet;
             // 
-            // columnHeader1
+            // adherentTableAdapter
             // 
-            this.columnHeader1.Text = "Nom";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Prenom";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Nombre de license";
-            this.columnHeader3.Width = 107;
+            this.adherentTableAdapter.ClearBeforeFill = true;
             // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 617);
-            this.Controls.Add(this.lvMaxLicense);
-            this.Controls.Add(this.label1);
             this.Name = "Statistics";
             this.Text = "Statistics";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Statistics_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bdwinformDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adherentBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView lvMaxLicense;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private bdwinformDataSet bdwinformDataSet;
+        private System.Windows.Forms.BindingSource adherentBindingSource;
+        private bdwinformDataSetTableAdapters.adherentTableAdapter adherentTableAdapter;
     }
 }

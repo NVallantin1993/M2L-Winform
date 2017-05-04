@@ -12,7 +12,7 @@ namespace M2L_ProjetWinform
 {
     public partial class ListeAdherentClub : Form
     {
-        List<Club> LesClubs = AccessDB.GetAllClub();
+        List<Club> LesClubs = DBClub.GetAllClub();
         public ListeAdherentClub()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace M2L_ProjetWinform
                 i++;
             }
             label1.Text = i.ToString();
-            List<Adherent> LesAdhe = AccessDB.getAdherentClub(LesClubs.ElementAt(i - 1).getId());
+            List<Adherent> LesAdhe = DBAdherent.getAdherentClub(LesClubs.ElementAt(i - 1).getId());
             foreach(Adherent unAdhe in LesAdhe)
             {
                 ListViewItem laLigne = new ListViewItem();
@@ -48,7 +48,6 @@ namespace M2L_ProjetWinform
                 laLigne.SubItems.Add(unAdhe.getSexe().ToString());
                 laLigne.SubItems.Add(unAdhe.getRue() + " " + unAdhe.getCp() + " " + unAdhe.getVille());
                 laLigne.SubItems.Add((DateTime.Now.Year - int.Parse(unAdhe.getNaissance())).ToString()); ;
-                laLigne.SubItems.Add(unAdhe.getCotisation().ToString());
                 lvAdherent.Items.Add(laLigne);
             }
         }

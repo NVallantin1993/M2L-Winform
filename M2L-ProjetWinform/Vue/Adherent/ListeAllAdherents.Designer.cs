@@ -37,7 +37,6 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnFermer = new System.Windows.Forms.Button();
             this.bt_edit = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
@@ -52,8 +51,7 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
+            this.columnHeader8});
             this.lvListAdhe.Location = new System.Drawing.Point(12, 12);
             this.lvListAdhe.Name = "lvListAdhe";
             this.lvListAdhe.Size = new System.Drawing.Size(1121, 432);
@@ -93,10 +91,6 @@
             // columnHeader8
             // 
             this.columnHeader8.Text = "Ville";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Cotisation";
             // 
             // btnFermer
             // 
@@ -167,7 +161,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Button bt_edit;
         private System.Windows.Forms.Button btn_Delete;

@@ -19,15 +19,16 @@ namespace M2L_ProjetWinform
 
         private void Statistics_Load(object sender, EventArgs e)
         {
-            List<Adherent> MaxLicense = AccessDB.getMaxLicense();
-            foreach(Adherent unAdhe in MaxLicense)
+            // TODO: cette ligne de code charge les données dans la table 'bdwinformDataSet.adherent'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+ 
+            /*foreach(Adherent unAdhe in MaxLicense)
             {
                 ListViewItem laLigne = new ListViewItem();
                 laLigne.Text = unAdhe.getNom();
                 laLigne.SubItems.Add(unAdhe.getPrenom());
                 laLigne.SubItems.Add(unAdhe.getNbLicense().ToString());
                 lvMaxLicense.Items.Add(laLigne);
-            }
+            }*/
         }
     }
 }

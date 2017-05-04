@@ -37,7 +37,6 @@
             this.Adresse = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Age = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_recherche = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.btnFermer = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -57,8 +56,7 @@
             this.Prenom,
             this.Sexe,
             this.Adresse,
-            this.Age,
-            this.columnHeader1});
+            this.Age});
             this.lvAdherent.Location = new System.Drawing.Point(12, 98);
             this.lvAdherent.Name = "lvAdherent";
             this.lvAdherent.Size = new System.Drawing.Size(866, 324);
@@ -99,10 +97,6 @@
             this.btn_recherche.Text = "&Rechercher";
             this.btn_recherche.UseVisualStyleBackColor = false;
             this.btn_recherche.Click += new System.EventHandler(this.btn_recherche_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Cotisation";
             // 
             // label1
             // 
@@ -156,7 +150,6 @@
         private System.Windows.Forms.ColumnHeader Adresse;
         private System.Windows.Forms.ColumnHeader Age;
         private System.Windows.Forms.Button btn_recherche;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFermer;
     }

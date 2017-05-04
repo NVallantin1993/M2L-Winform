@@ -19,11 +19,11 @@ namespace M2L_ProjetWinform
 
         private void Add_Club_Click(object sender, EventArgs e)
         {
-            List<Club> LesClubs = AccessDB.GetAllClub();
+            List<Club> LesClubs = DBClub.GetAllClub();
             if (!LesClubs.Exists(x => (x.getNom() == tbNom.Text)))
             {
                 Club unClub = new Club(tbNom.Text, tbSite.Text, tbRue.Text + " " + tbVille.Text + " " + tbPostal.Text, tbTelephone.Text, tbMail.Text, tbSpecilite.Text);
-                AccessDB.AjouterClub(unClub);
+                DBClub.AjouterClub(unClub);
                 MessageBox.Show("Le club " + tbNom.Text + " a bien été ajouter");
             }
             else

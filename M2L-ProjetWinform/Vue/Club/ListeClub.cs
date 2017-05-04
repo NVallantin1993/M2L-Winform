@@ -19,7 +19,7 @@ namespace M2L_ProjetWinform
 
         private void ListeClub_Load(object sender, EventArgs e)
         {
-            List<Club> LesClubs = AccessDB.GetAllClub();
+            List<Club> LesClubs = DBClub.GetAllClub();
 
             foreach(Club unCl in LesClubs)
             {
@@ -30,7 +30,7 @@ namespace M2L_ProjetWinform
                 laLigne.SubItems.Add(unCl.getTelephone());
                 laLigne.SubItems.Add(unCl.getEmail());
                 laLigne.SubItems.Add(unCl.getType());
-                AccessDB.setClubAdherent(unCl);
+                DBClub.setClubAdherent(unCl);
                 laLigne.SubItems.Add(unCl.getNombreAdhe().ToString());
                 lvClub.Items.Add(laLigne);
             }

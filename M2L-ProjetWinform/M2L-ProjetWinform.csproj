@@ -50,6 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bdwinformDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdwinformDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classe\DBAdherent.cs" />
+    <Compile Include="Classe\DBClub.cs" />
+    <Compile Include="Classe\DBStat.cs" />
     <Compile Include="EditAdherent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +156,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bdwinformDataSet.xsc">
+      <DependentUpon>bdwinformDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdwinformDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdwinformDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdwinformDataSet.xss">
+      <DependentUpon>bdwinformDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

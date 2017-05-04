@@ -28,8 +28,8 @@ namespace M2L_ProjetWinform
                 sexe = char.Parse("M");
             if (!LesAdherents.Exists(x => (x.getNom() == tb_nom.Text)))
             {
-                Adherent unAdhe = new Adherent(sexe, tb_nom.Text, tb_prenom.Text, mc_naissance.SelectionStart.ToShortDateString(), tb_rue.Text, tb_cp.Text, tb_ville.Text, float.Parse(tb_coti.Text));
-                AccessDB.AjouterAdherent(unAdhe);
+                Adherent unAdhe = new Adherent(sexe, tb_nom.Text, tb_prenom.Text, mc_naissance.SelectionStart.ToShortDateString(), tb_rue.Text, tb_cp.Text, tb_ville.Text);
+                DBAdherent.AjouterAdherent(unAdhe);
                 MessageBox.Show("L'adherent " + tb_nom.Text + " " + tb_prenom.Text + " a bien été ajouter");
             }
             else
@@ -43,7 +43,6 @@ namespace M2L_ProjetWinform
 
         private void AddAdherent_Load(object sender, EventArgs e)
         {
-            tb_coti.Text = "test";
         }
     }
 }

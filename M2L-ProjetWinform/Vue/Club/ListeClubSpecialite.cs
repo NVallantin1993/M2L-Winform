@@ -12,7 +12,7 @@ namespace M2L_ProjetWinform
 {
     public partial class ListeClubSpecialite : Form
     {
-        List<Club> LesClubs = AccessDB.GetAllClub();
+        List<Club> LesClubs = DBClub.GetAllClub();
         public ListeClubSpecialite()
         {
             InitializeComponent();

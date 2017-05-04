@@ -35,8 +35,6 @@
             this.rb_female = new System.Windows.Forms.RadioButton();
             this.gb_Sexe = new System.Windows.Forms.GroupBox();
             this.gb_adress = new System.Windows.Forms.GroupBox();
-            this.tb_coti = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -104,8 +102,6 @@
             // 
             // gb_adress
             // 
-            this.gb_adress.Controls.Add(this.tb_coti);
-            this.gb_adress.Controls.Add(this.label7);
             this.gb_adress.Controls.Add(this.label6);
             this.gb_adress.Controls.Add(this.label5);
             this.gb_adress.Controls.Add(this.label4);
@@ -118,22 +114,6 @@
             this.gb_adress.TabIndex = 7;
             this.gb_adress.TabStop = false;
             this.gb_adress.Text = "Information Complémentaire :";
-            // 
-            // tb_coti
-            // 
-            this.tb_coti.Location = new System.Drawing.Point(180, 196);
-            this.tb_coti.Name = "tb_coti";
-            this.tb_coti.Size = new System.Drawing.Size(100, 20);
-            this.tb_coti.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 196);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Cotisation :";
             // 
             // label6
             // 
@@ -301,8 +281,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MonthCalendar mc_naissance;
-        private System.Windows.Forms.TextBox tb_coti;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Add_Adherent;
         private System.Windows.Forms.Button CloseWindow;
     }

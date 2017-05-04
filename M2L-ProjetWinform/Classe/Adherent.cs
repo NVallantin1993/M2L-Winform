@@ -15,11 +15,10 @@ namespace M2L_ProjetWinform
         private string rueAdresse;
         private string cp;
         private string ville;
-        private float cotisation;
         private int id;
         private int nbLicense;
         //CONSTRUCTEUR
-        public Adherent(char leSexe, string leNom, string lePrenom, string laNaissance, string laRue, string leCp, string laVille, float laCoti, int leId)
+        public Adherent(char leSexe, string leNom, string lePrenom, string laNaissance, string laRue, string leCp, string laVille, int leId)
         {
             sexe = leSexe;
             nom = leNom;
@@ -28,11 +27,10 @@ namespace M2L_ProjetWinform
             rueAdresse = laRue;
             cp = leCp;
             ville = laVille;
-            cotisation = laCoti;
             id = leId;
             nbLicense = int.Parse(null);
         }
-        public Adherent(char leSexe, string leNom, string lePrenom, string laNaissance, string laRue, string leCp, string laVille, float laCoti)
+        public Adherent(char leSexe, string leNom, string lePrenom, string laNaissance, string laRue, string leCp, string laVille)
         {
             sexe = leSexe;
             nom = leNom;
@@ -41,23 +39,20 @@ namespace M2L_ProjetWinform
             rueAdresse = laRue;
             cp = leCp;
             ville = laVille;
-            cotisation = laCoti;
             id = int.Parse(null);
             nbLicense = int.Parse(null);
         }
-        public Adherent(string leNom, string lePrenom, int leNbLicense)
+        public Adherent(char leSexe, string leNom, string lePrenom, string laNaissance, string laRue, string leCp, int lenblicense, string laVille)
         {
+            sexe = leSexe;
             nom = leNom;
             prenom = lePrenom;
-            nbLicense = leNbLicense;
-            sexe = char.Parse(null);
-            naissance = null;
-            rueAdresse = null;
-            cp = null;
-            ville = null;
-            cotisation = float.Parse(null);
+            naissance = laNaissance;
+            rueAdresse = laRue;
+            cp = leCp;
+            ville = laVille;
             id = int.Parse(null);
-
+            nbLicense = lenblicense;
         }
         // GETTEUR
 
@@ -68,7 +63,6 @@ namespace M2L_ProjetWinform
         public string getRue() { return rueAdresse; }
         public string getCp() { return cp; }
         public string getVille() { return ville; }
-        public float getCotisation() { return cotisation; }
         public int getId() { return id; }
         public int getNbLicense() { return nbLicense; }
         //setteur
@@ -76,7 +70,6 @@ namespace M2L_ProjetWinform
         public void setNom(string nouveau) { nom = nouveau; }
         public void setPrenom(string nouveau) { prenom = nouveau; }
         public void setAdresse(string nouveauRue, string nouveauCP, string nouveauVille) { rueAdresse = nouveauRue; cp = nouveauCP; ville = nouveauVille; }
-        public void setCotisation(float nouveau) { cotisation = nouveau; }
 
 
     }
