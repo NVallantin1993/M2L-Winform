@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A621EBC4-286A-46B2-986B-64AB4FEDDA09}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>M2L_ProjetWinform</RootNamespace>
+    <AssemblyName>M2L-ProjetWinform</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Vue\Evenement\AddEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Evenement\AddEvent.Designer.cs">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bdwinformDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdwinformDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classe\DBAdherent.cs" />
+    <Compile Include="Classe\DBClub.cs" />
+    <Compile Include="Classe\DBEvenement.cs" />
+    <Compile Include="Vue\Evenement\EditEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Evenement\EditEvent.Designer.cs">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\Evenement\ListeEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Evenement\ListeEvent.Designer.cs">
+      <DependentUpon>ListeEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\Club\EditClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Club\EditClub.Designer.cs">
+      <DependentUpon>EditClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\Adherent\EditAdherent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Adherent\EditAdherent.Designer.cs">
+      <DependentUpon>EditAdherent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\Club\AjoutClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Club\AjoutClub.Designer.cs">
+      <DependentUpon>AjoutClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classe\AccessDB.cs" />
+    <Compile Include="Vue\Club\ListeClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Club\ListeClub.Designer.cs">
+      <DependentUpon>ListeClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\Adherent\AddAdherent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Adherent\AddAdherent.Designer.cs">
+      <DependentUpon>AddAdherent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classe\Adherent.cs" />
+    <Compile Include="Classe\Club.cs" />
+    <Compile Include="Classe\Evenement.cs" />
+    <Compile Include="Acceuil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acceuil.Designer.cs">
+      <DependentUpon>Acceuil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classe\Inscription.cs" />
+    <Compile Include="Vue\Adherent\ListeAdherentClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Adherent\ListeAdherentClub.Designer.cs">
+      <DependentUpon>ListeAdherentClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\Adherent\ListeAllAdherents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vue\Adherent\ListeAllAdherents.Designer.cs">
+      <DependentUpon>ListeAllAdherents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vue\Evenement\AddEvent.resx">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Evenement\EditEvent.resx">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Evenement\ListeEvent.resx">
+      <DependentUpon>ListeEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Club\EditClub.resx">
+      <DependentUpon>EditClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Adherent\EditAdherent.resx">
+      <DependentUpon>EditAdherent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Club\AjoutClub.resx">
+      <DependentUpon>AjoutClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Club\ListeClub.resx">
+      <DependentUpon>ListeClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Adherent\AddAdherent.resx">
+      <DependentUpon>AddAdherent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acceuil.resx">
+      <DependentUpon>Acceuil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Adherent\ListeAdherentClub.resx">
+      <DependentUpon>ListeAdherentClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\Adherent\ListeAllAdherents.resx">
+      <DependentUpon>ListeAllAdherents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="bdwinformDataSet.xsc">
+      <DependentUpon>bdwinformDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdwinformDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdwinformDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdwinformDataSet.xss">
+      <DependentUpon>bdwinformDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
